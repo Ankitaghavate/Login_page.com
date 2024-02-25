@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Micro-Project</title>
+        <style>            
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,Helvetica,sans-serif;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25rem;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    border: 2px solid #dadce0;
+    border-radius: 8px;
+        
+}
+.box h2{
+    margin: 0 0 -0.125rem;
+    padding: 0;
+    color: #1b1a1a;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.box p{
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: .1px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    text-align: center;   
+}
+.box .inputBox{
+    position: relative; 
+}
+.box .inputBox input{
+    width: 93%;
+    padding: 0.625rem 10px;
+    font-size: 1rem;
+    letter-spacing: 0.062rem;
+    margin-bottom: 1.875rem;
+    border: 1px solid #ccc;
+    background: transparent;
+    border-radius: 4px;
+}
+.box .inputBox label{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    color: #ccc;
+    pointer-events: none;
+    transition: 0.3s;
+    
+}
+.forget{
+    margin-top: -20px;
+    
+}
+.forget button{
+    border-radius: 4px;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: .25px;
+    outline: 0;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+    text-align-last: left;
+    border: 0;
+    
+}
+.box input[type="submit"]{
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #1a73e8;
+    padding: 0.625rem 1.25rem;
+    cursor: pointer;
+    border-radius: 0.312rem;
+    font-size: 1rem;
+    float: right;
+    
+}
+.google-logo{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0px; 
+   
+    
+}
+            </style>
+            
+            <script language="javascript" type="text/javascript">
+           
+                    function  gotoLink(link)
+                 {       
+                      
+                     console.log(link.value);
+                     location.href='https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=actm';
+                 };
+
+                function forgot_gotoLink(link)
+                 { 
+                  
+                     console.log(link.value);
+                     location.href='https://accounts.google.com/signin/v2/usernamerecovery';
+                    
+                     };
+               
+                </script>
+           
+    </head>
+    <body>
+        <div class="box">
+              <section class="google-logo">
+            <img src="google-logo.png" alt="">
+            </section>
+            
+            <h2>Sign in</h2>
+            <p>Use a Google account</p>
+            <form action="" name="ank">
+                
+                <div class="inputBox">
+                    <input type="email" name="Email" id="tf1" required value="" placeholder="Enter email">                  
+                    </div>
+                
+                 <div class="inputBox">
+                    <input type="password" name="Password" id="tf2" required value="" placeholder="Enter passsword">                 
+                    </div>
+                
+                 <div class="forgot">
+                     <button onclick="forgot_gotoLink(this)">Forgot your password?</button>
+                 </div>
+                <input type="Submit" name="sign in" values="Sign in" onclick="gotoLink(this)">
+                
+                </form>
+    </body>
+</html>
